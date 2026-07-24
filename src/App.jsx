@@ -6,10 +6,12 @@ import {
   Technology, About, News, Careers, Contact, Arrow,
 } from './pages.jsx'
 
-const readRoute = () => {
-  const hash = window.location.hash.replace(/^#/, '')
-  return hash.startsWith('/') ? hash : '/'
+// Legacy #/ links (pre-launch) redirect to real paths once, before first render.
+if (window.location.hash.startsWith('#/')) {
+  window.history.replaceState(null, '', window.location.hash.slice(1))
 }
+
+const readRoute = () => window.location.pathname.replace(/\/+$/, '') || '/'
 
 function useInitialLocale() {
   return useState(() => {
@@ -43,7 +45,7 @@ function LanguageSwitch({ locale, setLocale }) {
 
 function Brand({ go }) {
   return (
-    <a className="brand" href="#/" onClick={(e) => { e.preventDefault(); go('/') }} aria-label="Xili Technology home">
+    <a className="brand" href="/" onClick={(e) => { e.preventDefault(); go('/') }} aria-label="Xili Technology home">
       <span className="brand-mark" aria-hidden="true">
         <img src="/assets/xili-logo-clean.png" alt="" />
       </span>
@@ -98,24 +100,33 @@ function App() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return
     }
-    window.location.hash = path
+    window.history.pushState(null, '', path)
+    setRoute(path)
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   useEffect(() => {
-    const onHash = () => {
-      setRoute(readRoute())
-      window.scrollTo({ top: 0, behavior: 'instant' })
-    }
-    window.addEventListener('hashchange', onHash)
-    return () => window.removeEventListener('hashchange', onHash)
+    const onPop = () => setRoute(readRoute())
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
   }, [])
 
   useEffect(() => {
     document.documentElement.lang = locale === 'zh' ? 'zh-CN' : locale
-    document.title = t.meta.title
+    const segs = route.split('/').filter(Boolean)
+    let label = ''
+    if (segs[0] === 'products') {
+      label = segs[1] ? (t.products.categories.find((c) => c.slug === segs[1])?.name || t.nav.products) : t.nav.products
+    } else if (segs[0] === 'solutions') {
+      label = segs[1] ? (t.solutions.items.find((i) => i.slug === segs[1])?.name || t.nav.solutions) : t.nav.solutions
+    } else if (segs[0]) {
+      label = { technology: t.nav.technology, about: t.nav.about, news: t.nav.news, careers: t.careers.title, contact: t.nav.contact }[segs[0]] || ''
+    }
+    document.title = label ? `${label} · ${t.meta.title}` : t.meta.title
     document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description)
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://xiliglobal.com${route === '/' ? '/' : route}`)
     try { window.localStorage.setItem('xili-locale', locale) } catch { /* unavailable */ }
-  }, [locale, t])
+  }, [locale, t, route])
 
   useEffect(() => {
     let frame = 0
