@@ -29,6 +29,9 @@ const ROUTES = [
   ['/contact', 'Contact · Xili Technology', 'Talk to Xili about metering, batteries and storage — Hangzhou headquarters and Deqing intelligent industrial park.'],
 ]
 
+// GitHub Pages 301-redirects directory routes to their trailing-slash form —
+// canonicals and sitemap entries use that final URL to spare crawlers the hop.
+const canon = (p) => (p === '/' ? '/' : `${p}/`)
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 const template = readFileSync(join(dist, 'index.html'), 'utf8')
 
@@ -37,8 +40,8 @@ const render = (path, title, desc) => template
   .replace(/(<meta name="description"\s+content=")[^"]*(")/s, `$1${esc(desc)}$2`)
   .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(title)}$2`)
   .replace(/(<meta property="og:description"\s+content=")[^"]*(")/s, `$1${esc(desc)}$2`)
-  .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${BASE}${path}$2`)
-  .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${BASE}${path === '/' ? '/' : path}$2`)
+  .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${BASE}${canon(path)}$2`)
+  .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${BASE}${canon(path)}$2`)
 
 for (const [path, title, desc] of ROUTES) {
   const html = render(path, title, desc)
@@ -57,7 +60,7 @@ writeFileSync(join(dist, '404.html'), template)
 const today = new Date().toISOString().slice(0, 10)
 writeFileSync(join(dist, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  ROUTES.map(([p]) => `  <url><loc>${BASE}${p === '/' ? '/' : p}</loc><lastmod>${today}</lastmod></url>`).join('\n') +
+  ROUTES.map(([p]) => `  <url><loc>${BASE}${canon(p)}</loc><lastmod>${today}</lastmod></url>`).join('\n') +
   '\n</urlset>\n')
 
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`)
