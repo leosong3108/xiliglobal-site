@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "xili-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5173,
+      "cwd": "/Users/ziyisong/Documents/Codex/2026-07-12/build-web-apps-plugin-build-web/outputs/xili-international"
+    }
+  ]
+}
