@@ -2,22 +2,25 @@ export const locales = ['en', 'fr', 'zh']
 
 /* Partner names are proper nouns shared across locales: [latin, chinese].
    Entries without a public latin name carry the Chinese mark only. */
+/* [latin, zh, logo] — logos scraped from cnxili.com and xilixn.com partner walls. */
 export const partnersList = [
-  ['State Grid', '国家电网'],
-  ['AIMA', '爱玛'],
-  ['Today Sunshine', '今日阳光'],
-  ['TONLY', '台翔'],
-  ['Ganfeng Lithium', '赣锋锂业'],
-  ['DFD New Energy', '多氟多新能源'],
-  ['EVE Energy', '亿纬锂能'],
-  ['Tianneng Group', '天能控股集团'],
-  ['SENUO', ''],
-  ['Guoxuan High-Tech', '国轩高科'],
-  ['', '闪速'],
-  ['', '超力源'],
-  ['GEYI Group', '格一集团'],
-  ['ETSU', '艾越'],
-  ['CB New Energy', '中比新能源'],
+  ['State Grid', '国家电网', 'state-grid'],
+  ['China Southern Power Grid', '中国南方电网', 'southern-grid'],
+  ['Tianneng Group', '天能控股集团', 'tianneng'],
+  ['EVE Energy', '亿纬锂能', 'eve'],
+  ['Ganfeng Lithium', '赣锋锂业', 'ganfeng'],
+  ['Guoxuan High-Tech', '国轩高科', 'guoxuan'],
+  ['AIMA', '爱玛', 'aima'],
+  ['DFD New Energy', '多氟多新能源', 'dfd'],
+  ['CB New Energy', '中比新能源', 'cb-new-energy'],
+  ['TONLY', '台翔', 'tonly'],
+  ['Today Sunshine', '今日阳光', 'today-sunshine'],
+  ['SENUO', '赛诺', 'senuo'],
+  ['Shansu', '闪速', 'shansu'],
+  ['Chaoliyuan', '超力源', 'chaoliyuan'],
+  ['GEYI Group', '格一集团', 'geyi'],
+  ['ETSU', '艾越', 'etsu'],
+  ['CPNN', '中国电力新闻网', 'cpnn'],
 ]
 
 

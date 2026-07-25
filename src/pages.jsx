@@ -377,13 +377,11 @@ export function Home({ t, go }) {
           <p className="section-lede">{t.home.partnersBody}</p>
         </Reveal>
         <div className="partner-wall">
-          {partnersList.map(([latin, zh], i) => {
-            const primary = t.home.zhFirst ? (zh || latin) : (latin || zh)
-            const secondary = t.home.zhFirst ? (zh ? latin : '') : (latin ? zh : '')
+          {partnersList.map(([latin, zh, logo], i) => {
+            const name = t.home.zhFirst ? (zh || latin) : (latin || zh)
             return (
-              <Reveal key={primary} delay={(i % 5) * 50} className="partner-cell">
-                <strong>{primary}</strong>
-                {secondary && <span>{secondary}</span>}
+              <Reveal key={logo} delay={(i % 5) * 45} className="partner-cell">
+                <img src={`/assets/partners/${logo}.png`} alt={name} loading="lazy" title={name} />
               </Reveal>
             )
           })}
