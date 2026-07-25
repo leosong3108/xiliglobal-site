@@ -420,7 +420,7 @@ export const content = {
       globalTitle: 'Measured at home. Trusted abroad.',
       globalBody: 'Xili serves 500+ clients across all 33 provincial-level regions of China, and ships metering products to export markets across Southeast Asia, Africa, Eastern Europe and South America. The company is a member of the DLMS User Association (Switzerland) and the STS Association (South Africa) — the two standards bodies that govern how the world’s meters communicate and prepay.',
       globalHub: 'Hangzhou',
-      globalMarkets: ['Thailand', 'Bangladesh', 'South Korea', 'Philippines', 'Ukraine', 'Russia', 'Ghana', 'Chile', 'Ecuador', 'Pakistan'],
+      globalMarkets: ['Thailand', 'Bangladesh', 'South Korea', 'Philippines', 'Eastern Europe', 'Ghana', 'Chile', 'Ecuador', 'Pakistan'],
       globalStats: [
         [33, '', 'Provinces & regions in China'],
         [10, '', 'Export markets'],
@@ -802,7 +802,7 @@ export const content = {
       globalTitle: 'Mesuré chez nous. Reconnu ailleurs.',
       globalBody: 'Xili sert plus de 500 clients dans les 33 régions provinciales de Chine et exporte ses produits de comptage vers l’Asie du Sud-Est, l’Afrique, l’Europe de l’Est et l’Amérique du Sud. L’entreprise est membre de la DLMS User Association (Suisse) et de la STS Association (Afrique du Sud) — les deux organismes qui régissent la communication et le prépaiement des compteurs dans le monde.',
       globalHub: 'Hangzhou',
-      globalMarkets: ['Thaïlande', 'Bangladesh', 'Corée du Sud', 'Philippines', 'Ukraine', 'Russie', 'Ghana', 'Chili', 'Équateur', 'Pakistan'],
+      globalMarkets: ['Thaïlande', 'Bangladesh', 'Corée du Sud', 'Philippines', 'Europe de l’Est', 'Ghana', 'Chili', 'Équateur', 'Pakistan'],
       globalStats: [
         [33, '', 'Régions provinciales en Chine'],
         [10, '', 'Marchés export'],
@@ -1184,7 +1184,7 @@ export const content = {
       globalTitle: '深耕国内，走向海外。',
       globalBody: '西力服务客户 500 余家，覆盖全国 33 个省级区域；计量产品远销东南亚、非洲、东欧与南美市场。公司是瑞士 DLMS 技术协会与南非 STS 技术协会会员——这两个国际组织定义着全球电表的通信与预付费标准。',
       globalHub: '杭州',
-      globalMarkets: ['泰国', '孟加拉', '韩国', '菲律宾', '乌克兰', '俄罗斯', '加纳', '智利', '厄瓜多尔', '巴基斯坦'],
+      globalMarkets: ['泰国', '孟加拉', '韩国', '菲律宾', '东欧', '加纳', '智利', '厄瓜多尔', '巴基斯坦'],
       globalStats: [
         [33, '', '覆盖省级区域'],
         [10, '', '海外出口市场'],
