@@ -382,6 +382,7 @@ export function Home({ t, go }) {
             return (
               <Reveal key={logo} delay={(i % 5) * 45} className="partner-cell">
                 <img src={`/assets/partners/${logo}.png`} alt={name} loading="lazy" title={name} />
+                <span className="partner-name">{name}</span>
               </Reveal>
             )
           })}
