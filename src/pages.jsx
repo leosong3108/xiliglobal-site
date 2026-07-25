@@ -198,6 +198,7 @@ const cardCover = { 'energy-storage': true }
 /* Export-market coordinates, same order as t.about.globalMarkets. */
 const marketCoords = [
   [13.75, 100.5], [23.8, 90.4], [37.55, 127.0], [14.6, 121.0],
+  [50.45, 30.52], [55.76, 37.62],
   [5.6, -0.2], [-33.45, -70.66], [-0.18, -78.47], [24.86, 67.0],
 ]
 const HUB_COORDS = [30.25, 120.16]
