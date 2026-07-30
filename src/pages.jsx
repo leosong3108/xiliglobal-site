@@ -880,7 +880,10 @@ export function About({ t, go }) {
       </section>
 
       <section className="panel-section page-gutter">
-        <Reveal as="p" className="section-index">{t.about.valuesTitle}</Reveal>
+        <Reveal className="section-head">
+          <p className="section-index">{t.about.valuesTitle}</p>
+          <p className="section-lede">{t.about.valuesLede}</p>
+        </Reveal>
         <div className="panel-grid">
           {t.about.values.map(([title, description], i) => (
             <Reveal key={title} delay={i * 80}>

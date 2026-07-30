@@ -326,6 +326,57 @@ const meteringInstruments = [
     ],
   },
   {
+    key: 'water-meters',
+    title: { en: 'Smart water meters', fr: "Compteurs d'eau intelligents", zh: '智能水表' },
+    note: {
+      en: 'A published product category on the company’s Chinese site: remote-reading, valve-control and ultrasonic water meters over NB-IoT and LoRa, read alongside electricity by the WJTL33 joint-reading concentrator.',
+      fr: 'Catégorie publiée sur le site chinois du groupe : compteurs d’eau à télérelevé, à vanne pilotée et ultrasoniques via NB-IoT et LoRa, relevés avec l’électricité par le concentrateur WJTL33.',
+      zh: '公司官网公开的产品类别：支持 NB-IoT 与 LoRa 的远传、阀控及超声波水表，可由 WJTL33 水电同抄集中器与电表一并抄收。',
+    },
+    items: [
+      {
+        img: 'lxsg-z', model: 'LXSG-Z',
+        name: { en: 'Direct-reading remote water meter', fr: "Compteur d'eau à télérelevé direct", zh: '直读式远传水表' },
+        specs: [['ports', 'Wired remote reading'], ['use', 'Residential and community metering']],
+      },
+      {
+        img: 'lxsg-zf', model: 'LXSG-ZF',
+        name: { en: 'Direct-reading remote water meter with valve control', fr: "Compteur d'eau à télérelevé direct avec vanne pilotée", zh: '直读式远传阀控水表' },
+        specs: [['ports', 'Wired remote reading · remote valve'], ['use', 'Prepaid and controlled supply']],
+      },
+      {
+        img: 'lxsy-wl', model: 'LXSY-WL',
+        name: { en: 'Wireless remote water meter with valve control', fr: "Compteur d'eau sans fil avec vanne pilotée", zh: '无线智能远传阀控水表' },
+        specs: [['ports', 'Wireless · remote valve'], ['use', 'Apartments and campuses']],
+      },
+      {
+        img: 'lxsy', model: 'LXSY',
+        name: { en: 'Wireless remote smart water meter', fr: "Compteur d'eau intelligent à télérelevé sans fil", zh: '无线远传智能水表' },
+        specs: [['ports', 'Wireless remote reading'], ['use', 'Residential metering']],
+      },
+      {
+        img: 'lxsk', model: 'LXSK',
+        name: { en: 'RF-card prepaid water meter', fr: "Compteur d'eau prépayé à carte RF", zh: '射频卡预付费水表' },
+        specs: [['ports', 'RF card'], ['use', 'Prepaid supply without a network']],
+      },
+      {
+        img: 'lxsy-nb', model: 'LXSY-NB',
+        name: { en: 'NB-IoT remote water meter', fr: "Compteur d'eau à télérelevé NB-IoT", zh: 'NB-IoT 无线远传智能水表' },
+        specs: [['ports', 'NB-IoT'], ['use', 'Utility-scale remote reading']],
+      },
+      {
+        img: 'lxc-wlf', model: 'LXC-WLF',
+        name: { en: 'LoRa ultrasonic water meter with valve control', fr: "Compteur d'eau ultrasonique LoRa avec vanne pilotée", zh: 'LoRa 无线远传阀控超声波水表' },
+        specs: [['ports', 'LoRa · remote valve'], ['rating', 'Ultrasonic measurement'], ['use', 'Campuses and industrial parks']],
+      },
+      {
+        img: 'lxc-wf', model: 'LXC-WF',
+        name: { en: 'NB-IoT ultrasonic water meter with valve control', fr: "Compteur d'eau ultrasonique NB-IoT avec vanne pilotée", zh: 'NB-IoT 无线远传阀控超声波水表' },
+        specs: [['ports', 'NB-IoT · remote valve'], ['rating', 'Ultrasonic measurement'], ['use', 'Utility and campus networks']],
+      },
+    ],
+  },
+  {
     key: 'terminals',
     title: {
       en: 'Acquisition terminals and concentrators',
