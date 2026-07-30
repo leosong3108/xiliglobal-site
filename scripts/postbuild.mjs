@@ -55,6 +55,26 @@ for (const [path, title, desc] of ROUTES) {
   }
 }
 
+/* Launch-era product URLs: a static hop to the new slug. GitHub Pages cannot
+   issue 301s, so these return 200 with a canonical + refresh to the new path and
+   are kept out of the index. */
+const REDIRECTS = [
+  ['/products/power-intelligence', '/products/metering-instruments'],
+  ['/products/battery-systems', '/products/new-energy'],
+  ['/products/energy-storage', '/products/new-energy'],
+]
+for (const [from, to] of REDIRECTS) {
+  const dir = join(dist, from.slice(1))
+  mkdirSync(dir, { recursive: true })
+  writeFileSync(join(dir, 'index.html'),
+    `<!doctype html><html lang="en"><head><meta charset="utf-8">` +
+    `<title>Moved · Xili Technology</title>` +
+    `<meta name="robots" content="noindex,follow">` +
+    `<link rel="canonical" href="${BASE}${to}/">` +
+    `<meta http-equiv="refresh" content="0; url=${to}/">` +
+    `</head><body><p>This page has moved to <a href="${to}/">${BASE}${to}/</a>.</p></body></html>\n`)
+}
+
 // Unknown URLs render the app shell (GitHub Pages serves 404.html with a 404 status).
 writeFileSync(join(dist, '404.html'), template)
 
@@ -66,4 +86,4 @@ writeFileSync(join(dist, 'sitemap.xml'),
 
 writeFileSync(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${BASE}/sitemap.xml\n`)
 
-console.log(`postbuild: ${ROUTES.length} routes prerendered, sitemap + robots + 404 written`)
+console.log(`postbuild: ${ROUTES.length} routes prerendered, ${REDIRECTS.length} redirects, sitemap + robots + 404 written`)
