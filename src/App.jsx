@@ -11,7 +11,18 @@ if (window.location.hash.startsWith('#/')) {
   window.history.replaceState(null, '', window.location.hash.slice(1))
 }
 
-const readRoute = () => window.location.pathname.replace(/\/+$/, '') || '/'
+/* The product taxonomy was re-cut to match the official leaflets; the launch-era
+   slugs still resolve so shared links and any early crawls do not break. */
+const LEGACY_ROUTES = {
+  '/products/power-intelligence': '/products/metering-instruments',
+  '/products/battery-systems': '/products/new-energy',
+  '/products/energy-storage': '/products/new-energy',
+}
+
+const readRoute = () => {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  return LEGACY_ROUTES[path] || path
+}
 
 function useInitialLocale() {
   return useState(() => {

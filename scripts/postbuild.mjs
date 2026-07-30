@@ -12,10 +12,11 @@ const BASE = 'https://xiliglobal.com'
 
 const ROUTES = [
   ['/', 'Xili Technology — Energy intelligence', 'Smart meters, battery systems and energy storage by Hangzhou Xili Intelligent Technology (688616.SH) — utility-grade measurement trusted by State Grid, exported worldwide.'],
-  ['/products', 'Products · Xili Technology', 'Smart electricity meters, water meters, acquisition terminals, distribution hardware, LFP batteries and energy-storage systems — the full Xili catalogue.'],
-  ['/products/power-intelligence', 'Power intelligence · Xili Technology', 'Single- and three-phase smart meters, smart water meters, concentrators, smart breakers and IoT metering enclosures — Grade-A State Grid supplier since 2019.'],
-  ['/products/battery-systems', 'Battery systems · Xili Technology', 'LFP power batteries by Zhejiang Xili New Energy — steel-shell full-tab cells, 170 Wh/kg, 2,000–2,500 cycles, full-domain BMS.'],
-  ['/products/energy-storage', 'Energy storage · Xili Technology', 'Portable power stations, home energy storage and commercial systems — IP67, V0 flame-retardant, smart BMS.'],
+  ['/products', 'Products · Xili Technology', 'Four official product series: metering instruments, metering transformers, distribution-network equipment and new energy — 44 documented models.'],
+  ['/products/metering-instruments', 'Metering instruments · Xili Technology', 'Class A/B/C single- and three-phase smart meters, DC energy meters, acquisition terminals and HPLC+HRF dual-mode modules. Grade-A State Grid supplier since 2019.'],
+  ['/products/metering-transformers', 'Metering transformers · Xili Technology', 'Current, voltage and combined instrument transformers from 0.66 kV to 35 kV in accuracy classes 0.2S and 0.5S, verified in a CNAS-accredited laboratory.'],
+  ['/products/distribution-network', 'Distribution network · Xili Technology', 'Metering enclosures to Q/GDW 11008-2013, smart low-voltage distribution cabinets and ZW32 primary–secondary integrated pole-mounted breakers.'],
+  ['/products/new-energy', 'New energy · Xili Technology', 'LFP power batteries from 48 V/24 Ah to 72 V/150 Ah, portable power stations, twelve-bay swap cabinets and 50 Wp solar home systems.'],
   ['/solutions', 'Solutions · Xili Technology', 'Grid intelligence, PV-storage-charging, commercial, apartment and campus energy management — five solution directions.'],
   ['/solutions/grid-intelligence', 'Grid intelligence · Xili Technology', 'Smart metering, acquisition and metering-box systems for utilities — an accurate, continuous view of the grid edge.'],
   ['/solutions/pv-storage-charging', 'PV · Storage · Charging · Xili Technology', 'Photovoltaic generation, battery storage and charging integrated under one measurement and control loop.'],

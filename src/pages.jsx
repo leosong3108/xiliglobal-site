@@ -3,7 +3,8 @@ import {
   Reveal, SplitTitle, CountUp, Magnetic,
   EnergyCanvas, TwinCanvas, GlobeCanvas,
 } from './motion.jsx'
-import { partnersList, meterCatalog, batteryCatalog } from './content'
+import { partnersList } from './content'
+import { catalogBySlug, specLabels } from './catalog'
 
 /* Image frame: real photo when src is given, designed placeholder otherwise. */
 export function ImageSlot({ label, src, ratio = '16 / 9', className = '', decorative = false }) {
@@ -190,11 +191,18 @@ export function HTimeline({ items }) {
 }
 
 const cardImg = {
-  'power-intelligence': '/assets/products/ddzy311.jpg',
-  'battery-systems': '/assets/products/battery-48v-blue.jpg',
-  'energy-storage': '/assets/photos/storage-scene.jpg',
+  'metering-instruments': '/assets/products/ddzy311.jpg',
+  'metering-transformers': '/assets/products/jzzv1-10.jpg',
+  'distribution-network': '/assets/products/jp-cabinet.jpg',
+  'new-energy': '/assets/products/x1000.jpg',
 }
-const cardCover = { 'energy-storage': true }
+const cardCover = {}
+/* Wide photo band under each series intro (metering instruments lead with the catalogue). */
+const seriesBand = {
+  'metering-transformers': '/assets/photos/robot-cell.jpg',
+  'distribution-network': '/assets/photos/warehouse.jpg',
+  'new-energy': '/assets/photos/portable-power.jpg',
+}
 /* Export-market coordinates, same order as t.about.globalMarkets. */
 const marketCoords = [
   [13.75, 100.5], [23.8, 90.4], [37.55, 127.0], [14.6, 121.0],
@@ -448,6 +456,7 @@ export function ProductCategory({ t, go, slug }) {
   const cat = t.products.categories[idx]
   if (!cat) return null
   const others = t.products.categories.filter((c) => c.slug !== slug)
+  const groups = catalogBySlug[slug] || []
   return (
     <>
       <PageHero
@@ -468,83 +477,47 @@ export function ProductCategory({ t, go, slug }) {
             {cat.points.map((point) => <li key={point}>{point}</li>)}
           </ul>
         </Reveal>
-        {cat.slug !== 'power-intelligence' && (
+        {seriesBand[slug] && (
           <Reveal delay={120}>
-            <ImageSlot
-              src={cat.slug === 'battery-systems' ? '/assets/photos/robot-cell.jpg' : '/assets/photos/storage-scene.jpg'}
-              label={cat.name}
-              ratio="21 / 8"
-              className="photo-band media-cover"
-            />
+            <ImageSlot src={seriesBand[slug]} label={cat.name} ratio="21 / 8" className="photo-band media-cover" decorative />
           </Reveal>
         )}
       </section>
-      {cat.slug === 'power-intelligence' ? (
-        <section className="panel-section page-gutter">
-          <Reveal as="p" className="section-index">{t.products.catalogIndex}</Reveal>
-          {meterCatalog.map((group) => (
-            <div className="catalog-group" key={group.key}>
-              <Reveal as="h2" className="catalog-title">{group.title[t.code]}</Reveal>
-              <div className="model-grid">
-                {group.items.map((item, i) => (
-                  <Reveal key={item.img} delay={(i % 4) * 60}>
-                    <article className="model-card">
-                      <ImageSlot src={`/assets/products/${item.img}.jpg`} label={item.model} ratio="1 / 1" />
-                      <div className="model-card-body">
-                        <strong>{item.model}</strong>
-                        <p>{item.name[t.code]}</p>
-                      </div>
-                    </article>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          ))}
-        </section>
-      ) : cat.slug === 'battery-systems' ? (
-        <section className="panel-section page-gutter">
-          <Reveal as="p" className="section-index">{t.products.catalogIndex}</Reveal>
-          {batteryCatalog.map((group) => (
-            <div className="catalog-group" key={group.key}>
-              <Reveal as="h2" className="catalog-title">{group.title[t.code]}</Reveal>
-              <div className="model-grid">
-                {group.items.map((item, i) => (
-                  <Reveal key={item.img} delay={(i % 4) * 60}>
-                    <article className="model-card">
-                      <ImageSlot src={`/assets/products/${item.img}.jpg`} label={item.model} decorative ratio="1 / 1" />
-                      <div className="model-card-body">
-                        <strong>{item.model}</strong>
-                        <p>{item.name[t.code]}</p>
-                      </div>
-                    </article>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          ))}
-        </section>
-      ) : (
-        <section className="panel-section page-gutter">
-          <Reveal as="p" className="section-index">{t.common.categories}</Reveal>
-          <div className="product-cards">
-            {cat.items.map(([name, description], i) => {
-              const itemImgs = ['/assets/products/ne-portable.jpg', '/assets/products/ne-home.jpg', '/assets/products/ne-ci.jpg']
-              return (
-                <Reveal key={name} delay={i * 80}>
-                  <article className="product-card product-card-static">
-                    <ImageSlot src={itemImgs[i]} label={name} decorative ratio="16 / 10" className="media-cover" />
-                    <div className="product-card-body">
-                      <span className="card-index">{String(i + 1).padStart(2, '0')}</span>
-                      <h3>{name}</h3>
-                      <p className="solution-card-desc">{description}</p>
+
+      <section className="panel-section page-gutter">
+        <Reveal as="p" className="section-index">{t.products.catalogIndex}</Reveal>
+        {groups.map((group) => (
+          <div className="catalog-group" key={group.key}>
+            <Reveal as="h2" className="catalog-title">{group.title[t.code]}</Reveal>
+            {group.note && <Reveal as="p" className="catalog-note">{group.note[t.code]}</Reveal>}
+            <div className="model-grid">
+              {group.items.map((item, i) => (
+                <Reveal key={item.img} delay={(i % 4) * 60}>
+                  <article className="model-card">
+                    <ImageSlot src={`/assets/products/${item.img}.jpg`} label={item.model} decorative ratio="1 / 1" />
+                    <div className="model-card-body">
+                      <strong>{item.model}</strong>
+                      <p>{item.name[t.code]}</p>
+                      {item.specs && (
+                        <dl className="model-specs">
+                          {item.specs.map(([key, value]) => (
+                            <div key={key}>
+                              <dt>{specLabels[key]?.[t.code] || key}</dt>
+                              <dd>{value}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                      )}
                     </div>
                   </article>
                 </Reveal>
-              )
-            })}
+              ))}
+            </div>
           </div>
-        </section>
-      )}
+        ))}
+        <Reveal as="p" className="tech-note">{t.products.seriesNote}</Reveal>
+      </section>
+
       <section className="related page-gutter">
         <Reveal as="p" className="section-index">{t.common.related}</Reveal>
         <div className="related-grid">
@@ -885,6 +858,25 @@ export function About({ t, go }) {
             ))}
           </dl>
         </Reveal>
+      </section>
+
+      <section className="panel-section page-gutter">
+        <Reveal className="section-head">
+          <p className="section-index">{t.about.subsidiariesIndex}</p>
+          <SplitTitle as="h2" text={t.about.subsidiariesTitle} />
+        </Reveal>
+        <div className="sub-grid">
+          {t.about.subsidiaries.map(([name, field, body], i) => (
+            <Reveal key={name} delay={i * 90}>
+              <article className="sub-card">
+                <span className="card-number">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{name}</h3>
+                <p className="sub-field">{field}</p>
+                <p>{body}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       <section className="panel-section page-gutter">
