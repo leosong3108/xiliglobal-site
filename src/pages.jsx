@@ -199,7 +199,7 @@ const cardImg = {
 const cardCover = {}
 /* Wide photo band under each series intro (metering instruments lead with the catalogue). */
 const seriesBand = {
-  'metering-transformers': '/assets/photos/robot-cell.jpg',
+  'metering-transformers': '/assets/photos/transformer-kit.jpg',
   'distribution-network': '/assets/photos/warehouse.jpg',
   'new-energy': '/assets/photos/portable-power.jpg',
 }

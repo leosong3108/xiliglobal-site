@@ -129,13 +129,13 @@ export const content = {
           name: 'Metering transformers',
           tagline: 'The first link in the measurement chain.',
           description: 'Current, voltage and combined instrument transformers from 0.66 kV to 35 kV, in accuracy classes 0.2S and 0.5S.',
-          longText: 'A meter is only as accurate as the transformer feeding it. Xili develops and manufactures its own current, voltage and combined instrument transformers on dedicated lines, and calibrates them in the company’s own CNAS-accredited laboratory (CNAS L9323). The transformer and the meter are verified to the same documented standard, so the accuracy class covers the whole measurement chain rather than one instrument in it.',
+          longText: 'A meter is only as accurate as the transformer feeding it. Xili develops and manufactures its own current, voltage and combined instrument transformers on dedicated lines, with a winding area and transformer test area of its own. Because the transformer and the meter come from the same house and are held to the same accuracy classes, the documented accuracy covers the whole measurement chain rather than one instrument in it.',
           items: [
             ['Low-voltage current transformers', 'Class 0.2S/0.5S at 0.66 kV, ratios from 75/5 A to 3000/5 A.'],
             ['Medium-voltage current and voltage transformers', 'Epoxy dry-type units for 10–35 kV systems, anti-pollution design.'],
             ['Combined transformers', 'VT and CT in one enclosure for direct high-voltage energy metering.'],
           ],
-          points: ['Accuracy classes 0.2S and 0.5S', 'In-house R&D and manufacturing', 'Transformer calibration in the CNAS-accredited laboratory (L9323)'],
+          points: ['Accuracy classes 0.2 · 0.2S · 0.5S', 'In-house R&D and manufacturing', 'Dedicated winding and transformer test areas'],
         },
         {
           slug: 'distribution-network',
@@ -551,13 +551,13 @@ export const content = {
           name: 'Transformateurs de mesure',
           tagline: 'Le premier maillon de la chaîne de mesure.',
           description: 'Transformateurs de courant, de tension et combinés de 0,66 kV à 35 kV, en classes de précision 0,2S et 0,5S.',
-          longText: 'Un compteur n’est jamais plus précis que le transformateur qui l’alimente. Xili développe et fabrique ses propres transformateurs de courant, de tension et combinés sur lignes dédiées, puis les étalonne dans son propre laboratoire accrédité CNAS (CNAS L9323). Le transformateur et le compteur sont vérifiés selon la même référence documentée : la classe de précision couvre toute la chaîne de mesure, et non un seul instrument.',
+          longText: 'Un compteur n’est jamais plus précis que le transformateur qui l’alimente. Xili développe et fabrique ses propres transformateurs de courant, de tension et combinés sur lignes dédiées, avec sa propre zone de bobinage et sa propre zone d’essais de transformateurs. Le transformateur et le compteur venant de la même maison et répondant aux mêmes classes de précision, la précision documentée couvre toute la chaîne de mesure, et non un seul instrument.',
           items: [
             ['Transformateurs de courant BT', 'Classes 0,2S/0,5S à 0,66 kV, rapports de 75/5 A à 3000/5 A.'],
             ['Transformateurs MT de courant et de tension', 'Unités sèches époxy pour réseaux 10–35 kV, conception anti-pollution.'],
             ['Transformateurs combinés', 'TT et TC dans une même enveloppe pour le comptage direct en haute tension.'],
           ],
-          points: ['Classes de précision 0,2S et 0,5S', 'R&D et fabrication en interne', 'Étalonnage des transformateurs au laboratoire accrédité CNAS (L9323)'],
+          points: ['Classes de précision 0,2 · 0,2S · 0,5S', 'R&D et fabrication en interne', 'Zones dédiées de bobinage et d’essais'],
         },
         {
           slug: 'distribution-network',
@@ -973,13 +973,13 @@ export const content = {
           name: '计量互感器',
           tagline: '计量链路的第一环。',
           description: '0.66kV 至 35kV 的电流、电压与组合互感器，准确度等级 0.2S、0.5S。',
-          longText: '电表再准，也准不过给它供电的互感器。西力的电流、电压与组合互感器均为自主研发生产，并在公司自有的 CNAS 认可实验室（CNAS L9323）完成检定。互感器与电表按同一套标准验证，所以准确度等级覆盖的是整条计量链路，而不是链路上的某一件设备。',
+          longText: '电表再准，也准不过给它供电的互感器。西力的电流、电压与组合互感器均为自主研发生产，建有专门的计量互感器绕线区与互感器检测区。互感器与电表出自同一家、按同一套准确度等级要求，因此可追溯的精度覆盖的是整条计量链路，而不是链路上的某一件设备。',
           items: [
             ['低压电流互感器', '0.66kV、0.2S/0.5S 级，变比覆盖 75/5A 至 3000/5A。'],
             ['中压电流与电压互感器', '面向 10–35kV 系统的环氧树脂干式产品，防污设计。'],
             ['组合互感器', 'PT 与 CT 一体化，用于高压线路直接计量。'],
           ],
-          points: ['0.2S 与 0.5S 准确度等级', '自主研发生产', '互感器检定在自有 CNAS 认可实验室（L9323）'],
+          points: ['0.2 · 0.2S · 0.5S 准确度等级', '自主研发生产', '自建互感器绕线区与检测区'],
         },
         {
           slug: 'distribution-network',
