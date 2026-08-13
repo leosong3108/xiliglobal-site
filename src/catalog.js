@@ -187,9 +187,14 @@ const meteringInstruments = [
   {
     key: 'rail-wall-meters',
     title: {
-      en: 'DIN-rail and wall-mount meters',
-      fr: 'Compteurs sur rail DIN et muraux',
-      zh: '导轨式与壁挂式电能表',
+      en: 'DIN-rail, wall-mount and DC meters',
+      fr: 'Compteurs sur rail DIN, muraux et CC',
+      zh: '导轨式、壁挂式与直流电能表',
+    },
+    note: {
+      en: 'DC models cover charging piles, photovoltaic generation, telecom towers and distributed energy.',
+      fr: 'Les modèles CC couvrent bornes de recharge, production photovoltaïque, pylônes télécom et énergie distribuée.',
+      zh: '其中直流电能表适用于直流充电桩、光伏发电、铁塔通信及分布式能源领域。',
     },
     items: [
       {
@@ -267,17 +272,6 @@ const meteringInstruments = [
           ['ports', 'RS485 · IR'],
         ],
       },
-    ],
-  },
-  {
-    key: 'dc-meters',
-    title: { en: 'DC energy meters', fr: "Compteurs d'énergie CC", zh: '直流电能表' },
-    note: {
-      en: 'For DC charging piles, photovoltaic generation, telecom towers and distributed energy.',
-      fr: 'Pour bornes de recharge CC, production photovoltaïque, pylônes télécom et énergie distribuée.',
-      zh: '适用于直流充电桩、光伏发电、铁塔通信及分布式能源领域。',
-    },
-    items: [
       {
         img: 'djsf311', model: 'DJSF311',
         name: {
@@ -502,9 +496,9 @@ const meteringTransformers = [
       zh: '计量用互感器',
     },
     note: {
-      en: 'Low-voltage current transformers plus medium- and high-voltage current, voltage and combined units for 0.66 kV to 35 kV systems — epoxy cast, high accuracy, anti-pollution.',
-      fr: 'Transformateurs de courant BT ainsi que transformateurs de courant, de tension et combinés MT/HT pour réseaux de 0,66 kV à 35 kV — moulés époxy, haute précision, anti-pollution.',
-      zh: '包括低压电流互感器、中高压电流/电压互感器及组合互感器，适用于 0.66kV 至 35kV 电力系统，环氧树脂干式浇注、高精度、防污。',
+      en: 'Low-voltage current transformers plus medium- and high-voltage current, voltage and combined units, for 0.66 kV to 35 kV power systems. High accuracy (0.2 / 0.2S / 0.5S), strong insulation, anti-pollution and dry-cast construction — used for energy metering, protective relaying and power measurement, giving the system accurate and safe signal conversion.',
+      fr: 'Transformateurs de courant BT ainsi que transformateurs de courant, de tension et combinés MT/HT, pour réseaux de 0,66 kV à 35 kV. Haute précision (0,2 / 0,2S / 0,5S), isolation renforcée, tenue à la pollution et construction moulée à sec — pour le comptage d’énergie, la protection par relais et la mesure de puissance, avec une conversion de signal précise et sûre.',
+      zh: '本系列产品包括低压电流互感器、中高压电流/电压互感器及组合互感器，适用于 0.66kV 至 35kV 电力系统，具备高精度（0.2/0.2S/0.5S）、强绝缘、防污、干式浇注等特性，广泛应用于电能计量、继电保护、功率测量等场景，可为电力系统提供精准、安全的信号转换与测量保障。',
     },
     items: [
       {
@@ -519,6 +513,7 @@ const meteringTransformers = [
           ['voltage', '0.66 kV and below · 50/60 Hz'],
           ['ratio', '(75–3000)/5 A'],
           ['burden', '5 VA'],
+          ['use', 'Current conversion and precise measurement · energy metering · protective relaying'],
         ],
       },
       {
@@ -533,6 +528,7 @@ const meteringTransformers = [
           ['voltage', '10–35 kV · 50 Hz'],
           ['ratio', '(30–2500)/5 A'],
           ['burden', '10 VA · 15 VA'],
+          ['use', 'High-accuracy current measurement · energy metering · power measurement · protective relaying'],
         ],
       },
       {
@@ -543,10 +539,11 @@ const meteringTransformers = [
           zh: '计量用电压互感器（环氧树脂浇注户内）',
         },
         specs: [
-          ['accuracy', 'Class 0.2 · 0.5'],
+          ['accuracy', 'Class 0.2S · 0.5S'],
           ['voltage', '10–35 kV · 50 Hz'],
           ['ratio', '(10–35) kV/√3 kV · (10–35) kV/0.1 kV'],
           ['burden', '15 VA · 20 VA'],
+          ['use', 'Voltage conversion and precise measurement · energy metering · voltage supervision · protective relaying'],
         ],
       },
       {
@@ -561,6 +558,7 @@ const meteringTransformers = [
           ['voltage', '6 kV · 10 kV grid · 50 Hz'],
           ['ratio', '10 kV/0.1 kV · 10 kV/√3 kV · (30–500)/5 A'],
           ['burden', 'Voltage 10 VA · current 20 VA'],
+          ['use', 'Three-phase active and reactive energy metering · combined voltage-current conversion · direct HV line metering'],
         ],
       },
     ],
