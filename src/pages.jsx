@@ -198,6 +198,11 @@ const cardImg = {
 }
 const cardCover = {}
 /* Wide photo band under each series intro (metering instruments lead with the catalogue). */
+/* Wide band inside a solution detail page — deliberately different from the
+   card cover so the same photo does not appear twice in one journey. */
+const solBand = {
+  'grid-intelligence': '/assets/photos/grid-kit.jpg',
+}
 const seriesBand = {
   'metering-transformers': '/assets/photos/transformer-kit.jpg',
   'distribution-network': '/assets/photos/warehouse.jpg',
@@ -211,8 +216,9 @@ const marketCoords = [
 ]
 const HUB_COORDS = [30.25, 120.16]
 
+/* Solution card covers on the home and index pages. */
 const solImg = {
-  'grid-intelligence': '/assets/photos/grid-kit.jpg',
+  'grid-intelligence': '/assets/photos/grid-city.jpg',
   'pv-storage-charging': '/assets/photos/pv-solution.jpg',
   'commercial-energy': '/assets/photos/ci-energy.jpg',
   'apartment-energy': '/assets/photos/apartment-solution.jpg',
@@ -602,7 +608,7 @@ export function SolutionDetail({ t, go, slug }) {
           </div>
         </Reveal>
         <Reveal delay={120}>
-          <ImageSlot src={solImg[item.slug]} label={item.name} ratio="21 / 8" className="photo-band media-cover" />
+          <ImageSlot src={solBand[item.slug] || solImg[item.slug]} label={item.name} ratio="21 / 8" className="photo-band media-cover" decorative />
         </Reveal>
       </section>
       <section className="panel-section page-gutter">
