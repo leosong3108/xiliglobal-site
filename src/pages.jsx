@@ -212,7 +212,7 @@ const marketCoords = [
 const HUB_COORDS = [30.25, 120.16]
 
 const solImg = {
-  'grid-intelligence': '/assets/photos/meter-line.jpg',
+  'grid-intelligence': '/assets/photos/grid-kit.jpg',
   'pv-storage-charging': '/assets/photos/pv-solution.jpg',
   'commercial-energy': '/assets/photos/ci-energy.jpg',
   'apartment-energy': '/assets/photos/apartment-solution.jpg',
@@ -719,7 +719,7 @@ export function Technology({ t, go }) {
           ))}
         </div>
         <Reveal delay={120}>
-          <VideoLoop src="/assets/video/tech-robot.mp4" poster="/assets/video/tech-robot-poster.jpg" ratio="21 / 8" className="photo-band" />
+          <ImageSlot src="/assets/photos/robot-glow.jpg" label={t.technology.aiIndex} ratio="21 / 8" className="photo-band media-cover" decorative />
         </Reveal>
       </section>
 

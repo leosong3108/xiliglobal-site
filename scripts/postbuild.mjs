@@ -11,15 +11,15 @@ const dist = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist')
 const BASE = 'https://xiliglobal.com'
 
 const ROUTES = [
-  ['/', 'Xili Technology — Energy intelligence', 'Smart meters, battery systems and energy storage by Hangzhou Xili Intelligent Technology (688616.SH) — utility-grade measurement trusted by State Grid, exported worldwide.'],
+  ['/', 'Xili Technology — Energy intelligence', 'Smart meters, distribution-network equipment and energy storage by Hangzhou Xili Intelligent Technology (688616.SH) — utility-grade measurement trusted by State Grid, exported worldwide.'],
   ['/products', 'Products · Xili Technology', 'Four official product series: metering instruments, metering transformers, distribution-network equipment and new energy — 44 documented models.'],
   ['/products/metering-instruments', 'Metering instruments · Xili Technology', 'Class A/B/C single- and three-phase smart meters, DC energy meters, acquisition terminals and HPLC+HRF dual-mode modules. Grade-A State Grid supplier since 2019.'],
   ['/products/metering-transformers', 'Metering transformers · Xili Technology', 'Current, voltage and combined instrument transformers from 0.66 kV to 35 kV in accuracy classes 0.2S and 0.5S, verified in a CNAS-accredited laboratory.'],
   ['/products/distribution-network', 'Distribution network · Xili Technology', 'Metering enclosures to Q/GDW 11008-2013, smart low-voltage distribution cabinets and ZW32 primary–secondary integrated pole-mounted breakers.'],
-  ['/products/new-energy', 'New energy · Xili Technology', 'LFP power batteries from 48 V/24 Ah to 72 V/150 Ah, portable power stations, twelve-bay swap cabinets and 50 Wp solar home systems.'],
+  ['/products/new-energy', 'Energy storage · Xili Technology', 'Portable power stations from 288 Wh to 1,076 Wh and 50 Wp off-grid solar home systems, built on distributed-storage and microgrid technology.'],
   ['/solutions', 'Solutions · Xili Technology', 'Grid intelligence, PV-storage-charging, commercial, apartment and campus energy management — five solution directions.'],
   ['/solutions/grid-intelligence', 'Grid intelligence · Xili Technology', 'Smart metering, acquisition and metering-box systems for utilities — an accurate, continuous view of the grid edge.'],
-  ['/solutions/pv-storage-charging', 'PV · Storage · Charging · Xili Technology', 'Photovoltaic generation, battery storage and charging integrated under one measurement and control loop.'],
+  ['/solutions/pv-storage-charging', 'PV · Storage · Charging · Xili Technology', 'Photovoltaic generation, energy storage and charging integrated under one measurement and control loop.'],
   ['/solutions/commercial-energy', 'Commercial energy management · Xili Technology', 'Integrated energy management for parks, office buildings, enterprises and malls — measurement, storage and control in one system.'],
   ['/solutions/apartment-energy', 'Apartment energy management · Xili Technology', 'Smart management for rental apartments — contracts, rent, door locks and utilities on one platform with tenant apps.'],
   ['/solutions/campus-energy', 'Campus energy management · Xili Technology', 'Water and electricity for schools on one platform — remote reading, prepaid billing and dormitory safety policies.'],
@@ -27,7 +27,7 @@ const ROUTES = [
   ['/about', 'About us · Xili Technology', 'From a 1968 pump station to the first STAR-Market-listed smart-meter company — 500+ clients, 33 provinces, exports across four continents.'],
   ['/news', 'News · Xili Technology', 'Announcements and milestones — State Grid tender wins, ESG reports, green-factory recognition and more.'],
   ['/careers', 'Careers · Xili Technology', 'Join a team where measurement is a craft and energy is the mission.'],
-  ['/contact', 'Contact · Xili Technology', 'Talk to Xili about metering, batteries and storage — Hangzhou headquarters and Deqing intelligent industrial park.'],
+  ['/contact', 'Contact · Xili Technology', 'Talk to Xili about metering, distribution equipment and storage — Hangzhou headquarters and Deqing manufacturing base.'],
 ]
 
 // GitHub Pages 301-redirects directory routes to their trailing-slash form —
