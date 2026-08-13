@@ -16,7 +16,7 @@ const ROUTES = [
   ['/products/metering-instruments', 'Metering instruments · Xili Technology', 'Class A/B/C single- and three-phase smart meters, DC energy meters, acquisition terminals and HPLC+HRF dual-mode modules. Grade-A State Grid supplier since 2019.'],
   ['/products/metering-transformers', 'Metering transformers · Xili Technology', 'Current, voltage and combined instrument transformers from 0.66 kV to 35 kV in accuracy classes 0.2S and 0.5S, verified in a CNAS-accredited laboratory.'],
   ['/products/distribution-network', 'Distribution network · Xili Technology', 'Metering enclosures to Q/GDW 11008-2013, smart low-voltage distribution cabinets and ZW32 primary–secondary integrated pole-mounted breakers.'],
-  ['/products/new-energy', 'Energy storage · Xili Technology', 'Portable power stations from 288 Wh to 1,076 Wh and 50 Wp off-grid solar home systems, built on distributed-storage and microgrid technology.'],
+  ['/products/new-energy', 'New energy · Xili Technology', 'LFP power batteries for two-, three- and four-wheelers, portable power stations from 288 Wh to 1,076 Wh and 50 Wp off-grid solar systems — WESTPOW brand, CE, UN 38.3 and CCC certified.'],
   ['/solutions', 'Solutions · Xili Technology', 'Grid intelligence, PV-storage-charging, commercial, apartment and campus energy management — five solution directions.'],
   ['/solutions/grid-intelligence', 'Grid intelligence · Xili Technology', 'Smart metering, acquisition and metering-box systems for utilities — an accurate, continuous view of the grid edge.'],
   ['/solutions/pv-storage-charging', 'PV · Storage · Charging · Xili Technology', 'Photovoltaic generation, energy storage and charging integrated under one measurement and control loop.'],

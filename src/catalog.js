@@ -699,6 +699,111 @@ const distributionNetwork = [
 
 const newEnergy = [
   {
+    key: 'ev-batteries',
+    title: {
+      en: 'Electric-vehicle power batteries',
+      fr: 'Batteries motrices pour véhicules électriques',
+      zh: '电动车动力电池',
+    },
+    note: {
+      en: 'LFP chemistry with intelligent BMS protection against overcharge, over-discharge, short circuit and over-temperature. Three series: Weichi for two-wheelers, Ruishi for three-wheelers, Pu’an for four-wheelers. Exported under the WESTPOW brand with UN 38.3 transport testing, SDS/MSDS documentation and China Compulsory Certification.',
+      fr: 'Chimie LFP avec BMS intelligent protégeant contre surcharge, décharge profonde, court-circuit et surchauffe. Trois séries : Weichi pour deux-roues, Ruishi pour trois-roues, Pu’an pour quatre-roues. Exportées sous la marque WESTPOW avec essais de transport UN 38.3, documentation SDS/MSDS et certification obligatoire chinoise.',
+      zh: '磷酸铁锂体系，智能 BMS 具备过充、过放、短路及温度等多重保护。三大系列：“威驰”二轮、“睿士”三轮、“浦安”四轮。产品以自主品牌“威士浦 WESTPOW”出口，具备 UN 38.3 运输测试、SDS/MSDS 安全数据表与国家强制性产品认证（CCC）。',
+    },
+    items: [
+      {
+        img: 'xbm4824u', model: 'XBM4824U',
+        name: {
+          en: '“Weichi” two-wheeler power battery 4824',
+          fr: 'Batterie motrice deux-roues « Weichi » 4824',
+          zh: '“威驰”系列二轮电动车动力电池 4824',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '48 V / 24 Ah'],
+          ['range', '60–100 km'],
+          ['rating', '≈10 kg · 50 A discharge · lead-acid bay compatible'],
+          ['material', 'Plastic · stainless steel · aluminium alloy'],
+        ],
+      },
+      {
+        img: 'xlf6040t01', model: 'XLF6040T01',
+        name: {
+          en: '“Weichi” two-wheeler power battery 6040',
+          fr: 'Batterie motrice deux-roues « Weichi » 6040',
+          zh: '“威驰”系列二轮电动车动力电池 6040',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '60 V / 40 Ah · ≈2,400 Wh'],
+          ['range', '100–140 km'],
+          ['rating', '60 A continuous discharge'],
+          ['material', 'Stainless steel · aluminium alloy'],
+        ],
+      },
+      {
+        img: 'xlf6050t02', model: 'XLF6050T02',
+        name: {
+          en: '“Ruishi” three-wheeler power battery 6050',
+          fr: 'Batterie motrice trois-roues « Ruishi » 6050',
+          zh: '“睿士”系列三轮电动车动力电池 6050',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '60 V / 50 Ah · ≈3,000 Wh'],
+          ['range', '90–140 km'],
+          ['use', 'Cargo and passenger three-wheelers'],
+          ['material', 'Stainless steel · aluminium alloy'],
+        ],
+      },
+      {
+        img: 'xlf60100t01', model: 'XLF60100T01',
+        name: {
+          en: '“Ruishi” three-wheeler power battery 60100',
+          fr: 'Batterie motrice trois-roues « Ruishi » 60100',
+          zh: '“睿士”系列三轮电动车动力电池 60100',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '60 V / 100 Ah · ≈6,000 Wh'],
+          ['range', '150–185 km'],
+          ['rating', 'Temperature rise held below 150 °C'],
+          ['material', 'Stainless steel · aluminium alloy'],
+        ],
+      },
+      {
+        img: 'xlf72100t02', model: 'XLF72100T02',
+        name: {
+          en: '“Pu’an” four-wheeler power battery 72100',
+          fr: 'Batterie motrice quatre-roues « Pu’an » 72100',
+          zh: '“浦安”系列四轮电动车动力电池 72100',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '72 V / 100 Ah · ≈7,200 Wh'],
+          ['range', '180–220 km'],
+          ['use', 'Small low-speed four-wheelers, sightseeing and patrol vehicles'],
+          ['material', 'Stainless steel · aluminium alloy'],
+        ],
+      },
+      {
+        img: 'xbh72150v', model: 'XBH72150V',
+        name: {
+          en: '“Pu’an” four-wheeler power battery 72150',
+          fr: 'Batterie motrice quatre-roues « Pu’an » 72150',
+          zh: '“浦安”系列四轮电动车动力电池 72150',
+        },
+        specs: [
+          ['cell', 'LiFePO₄'],
+          ['pack', '72 V / 150 Ah · ≈10,800 Wh'],
+          ['range', '180–220 km (replaceable pack)'],
+          ['rating', '200 A continuous discharge'],
+          ['material', 'Stainless steel · aluminium alloy'],
+        ],
+      },
+    ],
+  },
+  {
     key: 'portable-power',
     title: {
       en: 'Portable power stations',

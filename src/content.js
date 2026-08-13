@@ -152,11 +152,12 @@ export const content = {
         },
         {
           slug: 'new-energy',
-          name: 'Energy storage',
+          name: 'New energy',
           tagline: 'Stored where it is worth most.',
           description: 'Portable power stations and off-grid solar home systems by Zhejiang Xili New Energy, built on distributed-storage and microgrid research.',
-          longText: 'Zhejiang Xili New Energy, capitalised at ¥50 million, works on battery management, distributed storage and microgrid technology — liquid-cooling flow-channel design, thermal-runaway early warning, and battery-temperature prediction researched with the Yangtze Delta Research Institute of UESTC. Its packs and stations ship under the WESTPOW brand, a registered trademark in the European Union and the United States, and carry CE marking, UN 38.3 transport testing, SDS/MSDS documentation and China Compulsory Certification. Production runs under ISO 9001, 14001 and 45001.',
+          longText: 'Zhejiang Xili New Energy, capitalised at ¥50 million, works on battery management, distributed storage and microgrid technology — liquid-cooling flow-channel design, thermal-runaway early warning, and battery-temperature prediction researched with the Yangtze Delta Research Institute of UESTC. Its packs and stations ship under the WESTPOW brand, a registered trademark in the European Union and the United States, and carry CE marking, UN 38.3 transport testing, SDS/MSDS documentation and China Compulsory Certification. Its own patent family covers portable storage cases, household storage batteries, wall-mounted storage units and storage enclosures. Production runs under ISO 9001, 14001 and 45001.',
           items: [
+            ['EV power batteries', 'LFP packs from 48 V/24 Ah to 72 V/150 Ah for two-, three- and four-wheelers, exported under the WESTPOW brand.'],
             ['Portable power stations', '288 Wh to 1,076 Wh with AC, DC, USB output and solar charging.'],
             ['Off-grid solar systems', '50 Wp solar home systems with PAYGO metering for off-grid lighting and charging.'],
             ['Home & commercial storage', 'Distributed storage for peak shaving, backup power and self-consumption.'],
@@ -573,11 +574,12 @@ export const content = {
         },
         {
           slug: 'new-energy',
-          name: 'Stockage d’énergie',
+          name: 'Énergies nouvelles',
           tagline: 'Stockée là où elle vaut le plus.',
           description: 'Stations d’énergie portables et systèmes solaires domestiques hors réseau par Zhejiang Xili New Energy, adossés à la recherche en stockage distribué et microréseaux.',
-          longText: 'Zhejiang Xili New Energy, dotée d’un capital de 50 millions de yuans, travaille sur la gestion de batteries, le stockage distribué et les microréseaux — conception des canaux de refroidissement liquide, alerte précoce d’emballement thermique et prédiction de température des batteries étudiée avec l’Institut de recherche du delta du Yangtsé de l’UESTC. Ses packs et stations sont commercialisés sous la marque WESTPOW, déposée dans l’Union européenne et aux États-Unis, et portent le marquage CE, les essais de transport UN 38.3, la documentation SDS/MSDS et la certification obligatoire chinoise. La production est conduite sous ISO 9001, 14001 et 45001.',
+          longText: 'Zhejiang Xili New Energy, dotée d’un capital de 50 millions de yuans, travaille sur la gestion de batteries, le stockage distribué et les microréseaux — conception des canaux de refroidissement liquide, alerte précoce d’emballement thermique et prédiction de température des batteries étudiée avec l’Institut de recherche du delta du Yangtsé de l’UESTC. Ses packs et stations sont commercialisés sous la marque WESTPOW, déposée dans l’Union européenne et aux États-Unis, et portent le marquage CE, les essais de transport UN 38.3, la documentation SDS/MSDS et la certification obligatoire chinoise. Son portefeuille de brevets couvre coffrets de stockage portables, batteries de stockage domestiques, unités murales et enveloppes de stockage. La production est conduite sous ISO 9001, 14001 et 45001.',
           items: [
+            ['Batteries motrices VE', 'Packs LFP de 48 V/24 Ah à 72 V/150 Ah pour deux, trois et quatre-roues, exportés sous la marque WESTPOW.'],
             ['Stations d’énergie portables', 'De 288 Wh à 1 076 Wh avec sorties CA, CC, USB et charge solaire.'],
             ['Systèmes solaires hors réseau', 'Systèmes solaires domestiques 50 Wc avec comptage PAYGO, pour l’éclairage et la recharge hors réseau.'],
             ['Stockage résidentiel et commercial', 'Stockage distribué pour l’écrêtage de pointe, le secours et l’autoconsommation.'],
@@ -994,11 +996,12 @@ export const content = {
         },
         {
           slug: 'new-energy',
-          name: '储能产品',
+          name: '新能源产品',
           tagline: '把电留到最需要的时刻。',
           description: '浙江西力新能源的便携储能电源与离网太阳能家用系统，底层是分布式储能与微电网技术。',
-          longText: '注册资金 5000 万元的浙江西力新能源，聚焦电池管理技术、分布式储能技术与微电网技术：液冷流道重构、储能系统热失控预警，以及与电子科技大学长三角研究院（湖州）联合研究的电池系统温度预测方法。产品以自主品牌“威士浦 WESTPOW”出口，已注册欧盟与美国商标，并取得 CE 认证、UN 38.3 运输测试、SDS/MSDS 安全数据表与国家强制性产品认证（CCC）。按 ISO 9001、14001、45001 体系生产。',
+          longText: '注册资金 5000 万元的浙江西力新能源，聚焦电池管理技术、分布式储能技术与微电网技术：液冷流道重构、储能系统热失控预警，以及与电子科技大学长三角研究院（湖州）联合研究的电池系统温度预测方法。产品以自主品牌“威士浦 WESTPOW”出口，已注册欧盟与美国商标，并取得 CE 认证、UN 38.3 运输测试、SDS/MSDS 安全数据表与国家强制性产品认证（CCC）。自有专利族覆盖便携储能箱、户用储能电池、靠墙式储能电池与储能装置等结构。按 ISO 9001、14001、45001 体系生产。',
           items: [
+            ['电动车动力电池', '48V/24Ah 至 72V/150Ah 磷酸铁锂电池组，覆盖二轮、三轮与四轮车型，以“威士浦 WESTPOW”品牌出口。'],
             ['便携储能电源', '288Wh 至 1076Wh，交流、直流、USB 输出，支持太阳能充电。'],
             ['离网太阳能系统', '50Wp 太阳能家用系统，支持 PAYGO 计量，用于离网照明与充电。'],
             ['家庭与工商业储能', '面向削峰填谷、备用电源与自发自用的分布式储能。'],
