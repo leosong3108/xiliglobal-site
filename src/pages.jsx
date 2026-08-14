@@ -731,7 +731,7 @@ export function Technology({ t, go }) {
           ))}
         </div>
         <Reveal delay={120}>
-          <ImageSlot src="/assets/photos/robot-glow.jpg" label={t.technology.aiIndex} ratio="21 / 8" className="photo-band media-cover" decorative />
+          <ImageSlot src="/assets/photos/ai-vision.jpg" label={t.technology.aiIndex} ratio="21 / 8" className="photo-band media-cover" decorative />
         </Reveal>
       </section>
 
