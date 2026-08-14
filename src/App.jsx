@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { content, locales } from './content'
+import { content, locales, LINKEDIN_URL } from './content'
 import { ScrollProgress } from './motion.jsx'
 import {
   Home, ProductsIndex, ProductCategory, SolutionsIndex, SolutionDetail,
@@ -30,6 +30,12 @@ const readRoute = () => {
   const path = currentPath().replace(LOCALE_PREFIX, '') || '/'
   return LEGACY_ROUTES[path] || path
 }
+
+export const LinkedInMark = () => (
+  <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M6.94 5.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.4 8.9h3.1V21H3.4V8.9Zm5.5 0h2.97v1.65h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.09v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H8.9V8.9Z" />
+  </svg>
+)
 
 /* Build an href for a route under a given locale. */
 export const localeHref = (locale, route) =>
@@ -315,6 +321,15 @@ function App() {
         </div>
         <div className="footer-bottom">
           <p className="footer-legal">{t.footer.legal}</p>
+          <a
+            className="footer-social"
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer me"
+          >
+            <LinkedInMark />
+            <span>{t.contact.linkedinCta}</span>
+          </a>
         </div>
       </footer>
 

@@ -1,3 +1,5 @@
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/110480951/'
+
 export const locales = ['en', 'fr', 'zh']
 
 /* Partner names are proper nouns shared across locales: [latin, chinese].
@@ -452,6 +454,8 @@ export const content = {
         ['deqing-park', 'Manufacturing base · Deqing', 'No. 733 North Huancheng Road, Deqing County, Huzhou 313000, Zhejiang, China · +86 572 8233298 / 8233258'],
       ],
       emailTitle: 'Email',
+      linkedinTitle: 'LinkedIn',
+      linkedinCta: 'Follow Xili on LinkedIn',
       responseNote: 'We reply to solution enquiries within two business days.',
     },
     footer: {
@@ -888,6 +892,8 @@ export const content = {
         ['deqing-park', 'Site de production · Deqing', 'No 733 route Huancheng Nord, comté de Deqing, Huzhou 313000, Zhejiang, Chine · +86 572 8233298 / 8233258'],
       ],
       emailTitle: 'E-mail',
+      linkedinTitle: 'LinkedIn',
+      linkedinCta: 'Suivre Xili sur LinkedIn',
       responseNote: 'Nous répondons aux demandes de solution sous deux jours ouvrés.',
     },
     footer: {
@@ -1324,6 +1330,8 @@ export const content = {
         ['deqing-park', '生产基地 · 德清', '浙江省湖州市德清县环城北路 733 号，邮编 313000 · 0572-8233298 / 8233258'],
       ],
       emailTitle: '电子邮箱',
+      linkedinTitle: '领英',
+      linkedinCta: '在 LinkedIn 关注西力',
       responseNote: '方案类咨询将在两个工作日内回复。',
     },
     footer: {

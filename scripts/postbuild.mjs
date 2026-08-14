@@ -12,7 +12,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { content, locales } from '../src/content.js'
+import { content, locales, LINKEDIN_URL } from '../src/content.js'
 import { catalogBySlug } from '../src/catalog.js'
 
 const dist = join(dirname(fileURLToPath(import.meta.url)), '..', 'dist')
@@ -98,7 +98,7 @@ const organisation = {
       addressCountry: 'CN',
     },
   ],
-  sameAs: ['https://www.cnxili.com'],
+  sameAs: ['https://www.cnxili.com', LINKEDIN_URL],
 }
 
 function breadcrumb(locale, entry) {

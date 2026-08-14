@@ -3,7 +3,7 @@ import {
   Reveal, SplitTitle, CountUp, Magnetic,
   EnergyCanvas, TwinCanvas, GlobeCanvas,
 } from './motion.jsx'
-import { partnersList } from './content'
+import { partnersList, LINKEDIN_URL } from './content'
 import { catalogBySlug, specLabels } from './catalog'
 
 /* Image frame: real photo when src is given, designed placeholder otherwise. */
@@ -1056,6 +1056,8 @@ export function Contact({ t }) {
           <div className="contact-field">
             <span>{t.contact.emailTitle}</span>
             <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
+            <span>{t.contact.linkedinTitle}</span>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{t.contact.linkedinCta}</a>
           </div>
           <div className="contact-field">
             <span>{t.contact.officeTitle}</span>
