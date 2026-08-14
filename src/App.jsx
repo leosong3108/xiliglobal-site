@@ -26,6 +26,12 @@ const readRoute = () => {
 
 function useInitialLocale() {
   return useState(() => {
+    // ?lang=zh wins, so a Chinese or French link can be shared directly.
+    const asked = new URLSearchParams(window.location.search).get('lang')
+    if (locales.includes(asked)) {
+      try { window.localStorage.setItem('xili-locale', asked) } catch { /* unavailable */ }
+      return asked
+    }
     try {
       const saved = window.localStorage.getItem('xili-locale')
       if (locales.includes(saved)) return saved
