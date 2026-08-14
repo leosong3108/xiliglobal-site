@@ -192,6 +192,7 @@ export function HTimeline({ items }) {
 
 const cardImg = {
   'metering-instruments': '/assets/products/ddzy311.jpg',
+  'water-meters': '/assets/products/lxc-wf.jpg',
   'metering-transformers': '/assets/products/jzzv1-10.jpg',
   'distribution-network': '/assets/products/jp-cabinet.jpg',
   'new-energy': '/assets/products/x1000.jpg',

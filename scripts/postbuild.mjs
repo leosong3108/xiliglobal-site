@@ -12,8 +12,9 @@ const BASE = 'https://xiliglobal.com'
 
 const ROUTES = [
   ['/', 'Xili Technology — Energy intelligence', 'Smart meters, distribution-network equipment and energy storage by Hangzhou Xili Intelligent Technology (688616.SH) — utility-grade measurement trusted by State Grid, exported worldwide.'],
-  ['/products', 'Products · Xili Technology', 'Four official product series: metering instruments, metering transformers, distribution-network equipment and new energy — 51 documented models.'],
+  ['/products', 'Products · Xili Technology', 'Five product series: metering instruments, smart water meters, metering transformers, distribution-network equipment and new energy — 51 documented models.'],
   ['/products/metering-instruments', 'Metering instruments · Xili Technology', 'Class A/B/C single- and three-phase smart meters, DC energy meters, acquisition terminals and HPLC+HRF dual-mode modules. Grade-A State Grid supplier since 2019.'],
+  ['/products/water-meters', 'Smart water meters · Xili Technology', 'Direct-reading, wireless remote, valve-control and ultrasonic water meters over NB-IoT and LoRa — read alongside electricity by the WJTL33 joint-reading concentrator.'],
   ['/products/metering-transformers', 'Metering transformers · Xili Technology', 'Current, voltage and combined instrument transformers from 0.66 kV to 35 kV in accuracy classes 0.2, 0.2S and 0.5S — for energy metering, protective relaying and power measurement.'],
   ['/products/distribution-network', 'Distribution network · Xili Technology', 'Metering enclosures to Q/GDW 11008-2013, smart low-voltage distribution cabinets and ZW32 primary–secondary integrated pole-mounted breakers.'],
   ['/products/new-energy', 'New energy · Xili Technology', 'LFP power batteries for two-, three- and four-wheelers, portable power stations from 288 Wh to 1,076 Wh and 50 Wp off-grid solar systems — WESTPOW brand, CE, UN 38.3 and CCC certified.'],
