@@ -77,7 +77,7 @@ const organisation = {
   url: BASE,
   logo: `${BASE}/assets/xili-logo-clean.png`,
   foundingDate: '1968',
-  email: 'hzxilidb@cnxili.com',
+  email: 'info@xiliglobal.com',
   telephone: '+86-571-87825461',
   tickerSymbol: '688616',
   address: [

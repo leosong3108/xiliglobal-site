@@ -446,7 +446,7 @@ export const content = {
       heroBody: 'Tell us where your energy system needs more precision, visibility or resilience.',
       action: 'Start a conversation',
       channelsTitle: 'Reach us',
-      email: 'hzxilidb@cnxili.com',
+      email: 'info@xiliglobal.com',
       offices: 'Hangzhou · Deqing · China',
       officeTitle: 'Locations',
       locations: [
@@ -884,7 +884,7 @@ export const content = {
       heroBody: 'Indiquez-nous où votre système énergétique a besoin de plus de précision, de visibilité ou de résilience.',
       action: 'Démarrer une conversation',
       channelsTitle: 'Nous joindre',
-      email: 'hzxilidb@cnxili.com',
+      email: 'info@xiliglobal.com',
       offices: 'Hangzhou · Deqing · Chine',
       officeTitle: 'Implantations',
       locations: [
@@ -1322,7 +1322,7 @@ export const content = {
       heroBody: '告诉我们您的能源系统在哪些方面需要更高的精准度、可视化与可靠性。',
       action: '开始交流',
       channelsTitle: '联系方式',
-      email: 'hzxilidb@cnxili.com',
+      email: 'info@xiliglobal.com',
       offices: '杭州 · 德清 · 中国',
       officeTitle: '办公地点',
       locations: [
