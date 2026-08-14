@@ -19,14 +19,28 @@ const LEGACY_ROUTES = {
   '/products/energy-storage': '/products/new-energy',
 }
 
+/* Locale lives in the path so each language has its own indexable URL:
+   English stays at /products/…, Chinese at /zh/products/…, French at /fr/…. */
+const LOCALE_PREFIX = /^\/(zh|fr)(?=\/|$)/
+
+const currentPath = () => window.location.pathname.replace(/\/+$/, '') || '/'
+const localeInPath = () => (currentPath().match(LOCALE_PREFIX) || [])[1] || null
+
 const readRoute = () => {
-  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  const path = currentPath().replace(LOCALE_PREFIX, '') || '/'
   return LEGACY_ROUTES[path] || path
 }
 
+/* Build an href for a route under a given locale. */
+export const localeHref = (locale, route) =>
+  (locale === 'en' ? '' : `/${locale}`) + (route === '/' ? '/' : route)
+
 function useInitialLocale() {
   return useState(() => {
-    // ?lang=zh wins, so a Chinese or French link can be shared directly.
+    // A locale in the path wins — that is the canonical form for each language.
+    const fromPath = localeInPath()
+    if (fromPath) return fromPath
+    // ?lang=zh still works for links already shared in that form.
     const asked = new URLSearchParams(window.location.search).get('lang')
     if (locales.includes(asked)) {
       try { window.localStorage.setItem('xili-locale', asked) } catch { /* unavailable */ }
@@ -110,6 +124,12 @@ function App() {
   const megaTimer = useRef(null)
   const t = content[locale]
 
+  /* Switching language moves to that language's URL for the same route. */
+  const switchLocale = (next) => {
+    setLocale(next)
+    window.history.replaceState(null, '', localeHref(next, route))
+  }
+
   const go = (path) => {
     setMenuOpen(false)
     setMega(null)
@@ -117,7 +137,7 @@ function App() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return
     }
-    window.history.pushState(null, '', path)
+    window.history.pushState(null, '', localeHref(locale, path))
     setRoute(path)
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
@@ -129,7 +149,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    document.documentElement.lang = locale === 'zh' ? 'zh-CN' : locale
+    document.documentElement.lang = { zh: 'zh-Hans', fr: 'fr', en: 'en' }[locale]
     const segs = route.split('/').filter(Boolean)
     let label = ''
     if (segs[0] === 'products') {
@@ -141,7 +161,9 @@ function App() {
     }
     document.title = label ? `${label} · ${t.meta.title}` : t.meta.title
     document.querySelector('meta[name="description"]')?.setAttribute('content', t.meta.description)
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://xiliglobal.com${route === '/' ? '/' : route}`)
+    const canonicalPath = localeHref(locale, route)
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href',
+      `https://xiliglobal.com${canonicalPath.endsWith('/') ? canonicalPath : `${canonicalPath}/`}`)
     try { window.localStorage.setItem('xili-locale', locale) } catch { /* unavailable */ }
   }, [locale, t, route])
 
@@ -214,7 +236,7 @@ function App() {
             ))}
           </nav>
           <div className="header-actions">
-            <LanguageSwitch locale={locale} setLocale={setLocale} />
+            <LanguageSwitch locale={locale} setLocale={switchLocale} />
             <button className="header-contact" onClick={() => go('/contact')}>{t.nav.contact}</button>
             <button
               className="menu-button"
@@ -252,7 +274,7 @@ function App() {
             ))}
           </div>
           <div className="mobile-menu-meta">
-            <LanguageSwitch locale={locale} setLocale={setLocale} />
+            <LanguageSwitch locale={locale} setLocale={switchLocale} />
             <a href={`mailto:${t.contact.email}`}>{t.contact.email}</a>
           </div>
         </div>

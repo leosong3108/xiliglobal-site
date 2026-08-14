@@ -501,7 +501,7 @@ export function ProductCategory({ t, go, slug }) {
               {group.items.map((item, i) => (
                 <Reveal key={item.img} delay={(i % 4) * 60}>
                   <article className="model-card">
-                    <ImageSlot src={`/assets/products/${item.img}.jpg`} label={item.model} decorative ratio="1 / 1" />
+                    <ImageSlot src={`/assets/products/${item.img}.jpg`} label={`${item.model} — ${item.name[t.code]}`} ratio="1 / 1" />
                     <div className="model-card-body">
                       <strong>{item.model}</strong>
                       <p>{item.name[t.code]}</p>
