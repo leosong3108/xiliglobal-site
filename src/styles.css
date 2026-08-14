@@ -1103,3 +1103,13 @@ dl.rv-hidden div::before { width: 0 !important; }
 @media (max-width: 580px) {
   .model-specs div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* Manufacturing-scale band on the technology page */
+.scale-band { margin: clamp(28px, 3.4vw, 46px) 0 clamp(34px, 4vw, 54px); }
+.scale-band figcaption {
+  margin-top: 14px;
+  font: 500 12px/1.7 var(--font-mono);
+  letter-spacing: .04em;
+  color: var(--ink-faint);
+  max-width: 78ch;
+}

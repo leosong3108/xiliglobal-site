@@ -672,6 +672,12 @@ export function Technology({ t, go }) {
           <SplitTitle as="h2" text={t.technology.sectionTitle} />
           <p className="section-lede">{t.technology.sectionBody}</p>
         </Reveal>
+        <Reveal delay={90}>
+          <figure className="scale-band">
+            <ImageSlot src="/assets/photos/workshop-scale.jpg" label={t.technology.title} ratio="21 / 8" className="photo-band media-cover" decorative />
+            <figcaption>{t.technology.scaleCaption}</figcaption>
+          </figure>
+        </Reveal>
         <div className="panel-grid panel-grid-4">
           {t.technology.list.map(([title, description], i) => (
             <Reveal key={title} delay={i * 80}>
