@@ -282,7 +282,7 @@ export const content = {
       labsTitle: 'Automated laboratories, around the clock.',
       labsBody: 'Xili’s testing centre is accredited by CNAS, the China National Accreditation Service for Conformity Assessment (CNAS L9323). Performance testing, reliability and environmental trials, EMC and electrical-safety testing all run here, on automated benches that do not stop between shifts. Twenty consecutive years of passing national and provincial quality supervision checks rest on verification the company runs itself.',
       labsList: [
-        ['Automated verification & calibration', 'Robotic benches verify meters and instrument transformers against reference standards — high-volume, operator-light, audit-ready.'],
+        ['Accuracy testing & calibration', 'Automated benches run accuracy tests and calibration on meters against reference standards — high-volume, operator-light, audit-ready.'],
         ['Reliability & environmental testing', 'Temperature, humidity, surge and life-cycle chambers prove products against years of field stress.'],
         ['EMC & electrical safety', 'Electromagnetic-compatibility and safety benches qualify products for grid environments and export markets.'],
         ['Energy-storage testing', 'Cell and pack benches cycle, load and abuse-test storage products across the full temperature window.'],
@@ -718,7 +718,7 @@ export const content = {
       labsTitle: 'Des laboratoires automatisés, jour et nuit.',
       labsBody: 'Le centre d’essais de Xili est accrédité CNAS, le service national chinois d’accréditation pour l’évaluation de la conformité (CNAS L9323). Essais de performance, de fiabilité et d’environnement, tests CEM et de sécurité électrique s’y déroulent sur des bancs automatisés qui ne s’arrêtent pas entre les équipes. Vingt années consécutives de contrôles qualité nationaux et provinciaux réussis reposent sur une vérification que l’entreprise mène elle-même.',
       labsList: [
-        ['Vérification et étalonnage automatisés', 'Des bancs robotisés vérifient compteurs et transformateurs de mesure contre des étalons de référence — haut volume, prêt pour l’audit.'],
+        ['Essais de précision et étalonnage', 'Des bancs automatisés réalisent essais de précision et étalonnage des compteurs contre des étalons de référence — haut volume, prêt pour l’audit.'],
         ['Fiabilité et essais d’environnement', 'Chambres de température, d’humidité, de surtension et d’endurance : des années de contraintes terrain, condensées.'],
         ['CEM et sécurité électrique', 'Des bancs de compatibilité électromagnétique et de sécurité qualifient les produits pour le réseau et l’export.'],
         ['Essais de stockage d’énergie', 'Des bancs cellule et pack cyclent, chargent et éprouvent les produits de stockage sur toute la plage de température.'],
@@ -1154,7 +1154,7 @@ export const content = {
       labsTitle: '全天候运转的自动化实验室。',
       labsBody: '西力测试中心已通过中国合格评定国家认可委员会认可（CNAS L9323）。产品在这里完成性能测试、可靠性与环境试验、电磁兼容与安全测试，自动化台架不随班次停。连续二十年通过国家级与省级质量监督抽查，靠的就是这一套自主可控的验证能力。',
       labsList: [
-        ['自动化检定与校准', '自动化台架对照基准标准批量检定电表与互感器——高通量、少人工、可审计。'],
+        ['准确度试验与校准', '自动化台架对照基准标准批量完成电能表准确度试验与校准——高通量、少人工、可审计。'],
         ['可靠性与环境试验', '高低温、湿热、浪涌与寿命试验箱，把多年现场应力浓缩进实验室。'],
         ['EMC 与电气安全', '电磁兼容与安全测试台架，为电网环境与出口市场做产品资质验证。'],
         ['储能测试', '电芯与 PACK 台架在全温度窗口内对储能产品做充放循环与滥用测试。'],
